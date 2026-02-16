@@ -5,7 +5,8 @@ export async function fetchGithub() {
             console.log('no such response');
             return [];
         }
-        return await response.json();
+        const repos = await response.json();
+        return repos.filter(repo => repo.topics.includes("portifolio"));
     } catch (error) {
         console.error(error.message);
         return [];
