@@ -11,52 +11,53 @@
 <header>
     <nav>
         <ul>
-            <li><a href="#home">Início</a></li>
-            <li><a href="#projects">Projetos</a></li>
-            <li><a href="#skills">Habilidades</a></li>
-            <li><a href="#contact">Contato</a></li>
+            <li><a href="#home" data-i18n="navHome">Início</a></li>
+            <li><a href="#projects" data-i18n="navProjects">Projetos</a></li>
+            <li><a href="#skills" data-i18n="navSkills">Habilidades</a></li>
+            <li><a href="#contact" data-i18n="navContact">Contato</a></li>
         </ul>
     </nav>
     <div class="language-switcher">
         <span class="lang-icon"></span>
         <div class="lang-options">
-            <button onclick="">PT</button>
-            <button onclick="">EN</button>
+            <button>PT</button>
+            <button>EN</button>
         </div>
     </div>
 </header>
 
 <main>
     <section id="home">
-        <h1 id="txt-greeting">Olá, eu sou o João Lucas</h1>
-        <p id="txt-intro">Estudante de Engenharia de Software e Desenvolvedor Full Stack.</p>
+        <h1 data-i18n="greeting">Olá, eu sou o João Lucas</h1>
+        <p data-i18n="intro">Estudante de Engenharia de Software e Desenvolvedor Full Stack.</p>
         <div class="profile-banner"></div>
     </section>
 
     <section id="projects">
-        <h2 id="txt-projects-title">Meus Projetos</h2>
+        <h2 data-i18n="projectsTitle">Meus Projetos</h2>
         <div id="project-list" class="grid-container">
         </div>
     </section>
 
     <section id="skills">
-        <h2 id="txt-skills-title">Habilidades Técnicas</h2>
+        <h2 data-i18n="skillsTitle">Habilidades Técnicas</h2>
         <ul id="skills-list">
         </ul>
     </section>
 
     <section id="contact">
-        <h2 id="txt-contact-title">Contato</h2>
+        <h2 data-i18n="contactTitle">Contato</h2>
         <form id="contact-form">
-            <label for="name" id="label-name">Nome</label>
-            <input type="text" id="name" name="name" placeholder="Seu Nome" required>
+            <label for="name" data-i18n="labelName">Nome</label>
+            <input type="text" id="name" name="name" data-i18n-placeholder="labelName" required>
 
-            <label for="email" id="label-email">E-mail</label>
-            <input type="email" id="email" name="email" placeholder="Seu E-mail" required>
+            <label for="email" data-i18n="labelEmail">E-mail</label>
+            <input type="email" id="email" name="email" data-i18n-placeholder="labelEmail" required>
 
-            <label for="message" id="label-message">Mensagem</label>
-            <textarea id="message" name="message" placeholder="Sua Mensagem"></textarea>
-            <button type="submit">Enviar</button>
+            <label for="message" data-i18n="labelMessage">Mensagem</label>
+            <textarea id="message" name="message" data-i18n-placeholder="labelMessage"></textarea>
+
+            <button type="submit" data-i18n="btnSend">Enviar</button>
         </form>
     </section>
 </main>
@@ -66,6 +67,6 @@
     <div id="api-content"></div>
 </footer>
 
-<script src="js/script.js"></script>
+<script type="module" src="js/script.js"></script>
 </body>
 </html>

@@ -1,0 +1,16 @@
+{
+  "greeting": "Olá, eu sou o João Lucas",
+  "navHome": "Início",
+  "navProjects": "Projetos",
+  "navSkills": "Habilidades",
+  "navContact": "Contato",
+  "intro": "Estudante de Engenharia de Software e Desenvolvedor Full Stack.",
+  "projectsTitle": "Meus Projetos",
+  "repoTitle": "Repositórios no GitHub",
+  "skillsTitle": "Habilidades Técnicas",
+  "contactTitle": "Contato",
+  "labelName": "Nome",
+  "labelEmail": "E-mail",
+  "labelMessage": "Mensagem",
+  "btnSend": "Enviar"
+}
