@@ -1,11 +1,4 @@
 import { loadTranslations, updateInterface } from './i18n.js';
-
-async function init() {
-    // Carrega o idioma padrão (pt) ao iniciar
-    const data = await loadTranslations('pt');
-    updateInterface(data);
-}
-
 const languageButtons = document.querySelectorAll('.language-switcher button');
 // Seta a linguagem como PT-BR ao carregar
 languageButtons[0].classList.add('active');
@@ -19,5 +12,3 @@ languageButtons.forEach(button => {
         updateInterface(data);
     });
 });
-
-init();
