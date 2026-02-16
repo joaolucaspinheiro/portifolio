@@ -1,5 +1,6 @@
 import { loadTranslations, updateInterface } from './i18n.js';
-import {fetchGithub} from './github.js';
+import { fetchGithub, renderProjects } from './github.js';
+let cachedRepos = [];
 // Tradução do site
 const languageButtons = document.querySelectorAll('.language-switcher button');
 
@@ -15,8 +16,12 @@ async function init() {
     });
     // 2. Aplica a tradução na interface estática
     updateInterface(initialData);
-    // 3. Busca os dados do GitHub passando as traduções
-    fetchGithub(initialData);
+    // 3. Caso não tenha os repositorios em cache, busca na api do github
+    if(cachedRepos.length === 0){
+        cachedRepos = await fetchGithub();
+    }
+    // monta os repositorios com a tradução
+    renderProjects(cachedRepos,initialData);
     // 4. Configura os botões de troca de idioma
     languageButtons.forEach(button => {
         button.addEventListener('click', async () => {
@@ -29,7 +34,7 @@ async function init() {
             // Recarrega tudo com o novo idioma
             const newData = await loadTranslations(lang);
             updateInterface(newData);
-            fetchGithub(newData); // Atualiza os cards do GitHub com o novo texto
+            renderProjects(cachedRepos,newData);
         });
     });
 }
