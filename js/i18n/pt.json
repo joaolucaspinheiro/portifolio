@@ -12,5 +12,6 @@
   "labelName": "Nome",
   "labelEmail": "E-mail",
   "labelMessage": "Mensagem",
-  "btnSend": "Enviar"
+  "btnSend": "Enviar",
+  "viewRepo": "Ver Repositório"
 }
