@@ -1,0 +1,190 @@
+/* Váriaveis */
+:root {
+    --primary-color: #2c3e50;
+    --secondary-color: #168ddd;
+    --bg-color: #f4f4f9;
+    --text-color: #333;
+    --white: #ffffff;
+    --border-color: #ccc;
+    --transition-speed: 0.5s;
+    --container-width: 1000px;
+}
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, sans-serif ;
+}
+
+body{
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    line-height: 1.5;
+}
+header{
+    background-color: var(--primary-color);
+    display: flex;
+    justify-content: space-between; /* Separa o menu dos botões do idioma */
+    align-items: center;
+    padding: 1rem;
+    position: sticky; /*Para manter o cabeçalho fixo*/
+    top: 0;
+    z-index: 1000; /*Sobrepõem o header*/
+}
+header ul {
+    display: flex;
+    list-style: none;
+    gap: 25px;
+}
+.language-switcher {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.lang-options {
+    display: none; /*Escondido por padrão, aparece no hover da classe pai*/
+    position: absolute; /*Posiciona com base no pai(language-switcher)*/
+    right: 0; /*Alinhado a direita para não vazar*/
+    top: 100%; /*Para aparecer abaixo do ícone*/
+    background-color: var(--primary-color);
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    flex-direction: column;
+    padding: 5px;
+    gap: 5px;
+    z-index: 1001; /*Fica acima da imagem de perfil e conteúdo do home*/
+    min-width: 60px;
+}
+
+.language-switcher:hover .lang-options {
+    display: flex;
+}
+.lang-icon {
+    display: inline-block;
+    width: 28px;
+    height: 28px;
+    background-color: var(--white); /*Como estamos usando mask, a cor é definida pelo fundo*/
+    -webkit-mask: url('../assets/icons/translation.svg') no-repeat center;
+    mask: url('../assets/icons/translation.svg') no-repeat center;
+    -webkit-mask-size: contain;
+    mask-size: contain;
+    transition: all 0.3s;
+}
+
+.language-switcher:hover .lang-icon,
+.language-switcher:focus-within .lang-icon {
+    transform: rotate(15deg);
+    background-color: var(--secondary-color);
+}
+header ul li a{
+    color: var(--white);
+    text-decoration: none;
+    font-weight: bold;
+    transition: color var(--transition-speed);
+}
+header ul li a:hover{
+    color: var(--secondary-color);
+}
+.language-switcher button{
+    background-color: transparent;
+    color: var(--white);
+    border: 1px solid var(--white);
+    border-radius: 4px;
+    padding: 5px 12px;
+    cursor: pointer;
+    transition: background-color var(--transition-speed);
+}
+.language-switcher button:hover{
+    background-color: var(--white);
+    color: var(--primary-color);
+
+}
+.language-switcher button.active{
+    background-color: var(--white);
+    color: var(--primary-color);
+    font-weight: bold;
+}
+
+section{
+    padding: 50px;
+    max-width: var(--container-width);
+    margin:auto;
+}
+h2{
+    border-bottom: 2px solid var(--primary-color);
+    margin-bottom: 10px;
+    padding-bottom: 5px;
+}
+#home{
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    min-height: 30vh;
+}
+#home h1{
+    font-size: 3rem;
+    color: var(--primary-color);
+    margin-bottom: 10px;
+    padding-bottom: 5px;
+}
+#home p{
+    font-size:1.5rem;
+    color: var(--text-color);
+}
+/* Banner com a foto */
+.profile-banner {
+    width: 200px;
+    height: 200px;
+    background-image: url('../assets/images/perfil.jpg');
+    background-size: cover; /*Ajusta a imagem para não distorcer*/
+    background-position: center; /*Centraliza a foto no circulo*/
+    border-radius: 50%; /*Torna a div um círculo perfeito*/
+    margin-top: 30px;
+    border: 5px solid var(--white);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+#contact-form {
+    display: flex;
+    flex-direction: column;
+    max-width: 500px;
+    margin: 20px auto;
+    gap: 10px;
+}
+
+#contact-form label {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+#contact-form input,
+#contact-form textarea {
+    padding: 10px;
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    margin-bottom: 15px;
+}
+#contact-form button {
+    background-color: var(--primary-color);
+    color: var(--white);
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all var(--transition-speed);
+    margin-top: 10px;
+}
+
+#contact-form button:hover {
+    background-color: var(--secondary-color);
+    transform: scale(1.02);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+#contact-form button:active {
+    transform: scale(0.98);
+}
