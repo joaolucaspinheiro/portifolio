@@ -7,7 +7,7 @@
     --primary-color: #473469;
     --white: #ffffff;
     --transition-speed: 0.5s;
-    --container-width: 1000px;
+    --container-width: 1400px;
 }
 *{
     box-sizing: border-box;
@@ -106,10 +106,11 @@ header ul li a:hover{
     font-weight: bold;
 }
 
-section{
-    padding: 50px 0;
+section {
+    padding: 80px 40px;
     max-width: var(--container-width);
-    margin:auto;
+    margin: 0 auto;
+    width: 100%;
 }
 section h2, section p, section form, section ul:not(#project-list) {
     padding-left: 20px;
