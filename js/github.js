@@ -17,13 +17,14 @@ export function renderProjects(repos, translations) {
     const container = document.getElementById('project-list');
     if (!container) return;
 
-    container.innerHTML = Array.isArray(repos) ? repos.map(repo => {
-        const viewText = translations?.viewRepo || "Ver Projeto";
-        return `
-            <div class="project-card">
-                <h3>${repo.name}</h3>
-                <a href="${repo.html_url}" target="_blank">${viewText}</a>
-            </div>
-        `;
-    }).join(''): '';
+    const viewText = translations?.viewRepo || "Ver Projeto";
+    const baseHTML = Array.isArray(repos) ? repos.map(repo => `
+        <div class="project-card">
+            <h3>${repo.name}</h3>
+            <a href="${repo.html_url}" target="_blank">${viewText}</a>
+        </div>
+    `).join('') : '';
+
+    // Multiplicamos o conteúdo para não haver buracos no carrossel
+    container.innerHTML = baseHTML + baseHTML + baseHTML;
 }
