@@ -13,5 +13,12 @@
   "labelEmail": "E-mail",
   "labelMessage": "Mensagem",
   "btnSend": "Enviar",
-  "viewRepo": "Ver Repositório"
+  "viewRepo": "Ver Repositório",
+  "educationTitle": "Trajetória Acadêmica",
+  "eduTitle1": "Técnico em Informática Integrado",
+  "eduInst1": "IFPR - Campus Paranavaí",
+  "eduDesc1": "Introdução aos fundamentos de Engenharia de Software estabelecendo uma base sólida em algoritmos, bancos de dados e redes.",
+  "eduTitle2": "Engenharia de Software",
+  "eduInst2": "IFPR - Campus Paranavaí",
+  "eduDesc2": "Aprofundamento em processos de software, Engenharia de Requisitos e desenvolvimento de sistemas escaláveis com foco em boas práticas e código limpo."
 }

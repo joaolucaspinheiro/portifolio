@@ -13,5 +13,12 @@
   "labelEmail": "E-mail",
   "labelMessage": "Message",
   "btnSend": "Send",
-  "viewRepo": "View Repository"
+  "viewRepo": "View Repository",
+  "educationTitle": "Academic Path",
+  "eduTitle1": "Integrated Vocational Technician in IT",
+  "eduInst1": "IFPR - Campus Paranavaí",
+  "eduDesc1": "Introduction to Software Engineering fundamentals, establishing a solid foundation in algorithms, databases, and networking.",
+  "eduTitle2": "Software Engineering",
+  "eduInst2": "IFPR - Campus Paranavaí",
+  "eduDesc2": "Deepening in software processes, Requirements Engineering, and scalable systems development focused on best practices and clean code."
 }
