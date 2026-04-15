@@ -399,3 +399,177 @@ h2{
     }
     .timeline-content { width: 100%; }
 }
+/* Container das habilidades */
+#skills-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 20px;
+    list-style: none;
+    padding: 40px 0;
+}
+
+.tech-card {
+    background: var(--white);
+    border: 1px solid rgba(174, 143, 186, 0.3);
+    border-radius: 15px;
+    padding: 30px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+.tech-category {
+    position: absolute;
+    top: 10px;
+    right: 12px;
+    font-size: 10px;
+    font-weight: bold;
+    color: var(--primary-color);
+    text-transform: uppercase;
+    opacity: 0.8;
+}
+
+.tech-icon {
+    width: 50px;
+    height: 50px;
+    transition: filter 0.3s ease;
+}
+
+/* Efeito de Glow no Hover */
+.tech-card:hover {
+    transform: translateY(-8px);
+    border-color: var(--accent-pink);
+    box-shadow: 0 10px 20px rgba(71, 52, 105, 0.1);
+}
+
+.tech-card:hover .tech-icon {
+    /* Cria um brilho suave ao redor do ícone no hover */
+    filter: drop-shadow(0 0 8px var(--accent-pink));
+}
+/* Layout da Seção de Contato */
+.contact-container {
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.contact-header {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1.2fr;
+    gap: 40px;
+    align-items: start;
+}
+
+/* Cards de Info */
+.contact-info {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.info-card {
+    background: var(--white);
+    padding: 20px;
+    border-radius: 12px;
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    border: 1px solid rgba(0,0,0,0.05);
+    transition: transform 0.3s ease;
+}
+
+.info-card:hover {
+    transform: translateX(10px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+}
+
+.icon-circle {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.icon-circle.primary { background: rgba(71, 52, 105, 0.1); color: var(--primary-color); }
+.icon-circle.secondary { background: rgba(174, 143, 186, 0.1); color: var(--secondary-color); }
+.icon-circle.accent { background: rgba(247, 158, 177, 0.1); color: var(--accent-pink); }
+
+.contact-link {
+    font-size: 0.9rem;
+    color: var(--secondary-color);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Formulário Estilizado */
+.form-container {
+    background: var(--white);
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+}
+
+.input-group {
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.input-group label {
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: var(--primary-color);
+}
+
+.input-group input, .input-group textarea {
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background: var(--bg-color);
+    transition: border-color 0.3s;
+}
+
+.input-group input:focus, .input-group textarea:focus {
+    outline: none;
+    border-color: var(--secondary-color);
+}
+
+.error-message {
+    color: #ff4d4d;
+    font-size: 0.8rem;
+    margin-top: 5px;
+    min-height: 1rem;
+}
+
+.char-count {
+    text-align: right;
+    font-size: 0.75rem;
+    color: #888;
+}
+
+/* Botão de Envio com Loading */
+#btn-submit {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.btn-icon { width: 18px; transition: transform 0.3s; }
+#btn-submit:hover .btn-icon { transform: translateX(5px); }
+
+/* Responsividade */
+@media (max-width: 850px) {
+    .contact-grid { grid-template-columns: 1fr; }
+}

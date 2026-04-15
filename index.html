@@ -42,8 +42,7 @@
 
     <section id="skills">
         <h2 data-i18n="skillsTitle">Habilidades Técnicas</h2>
-        <ul id="skills-list">
-        </ul>
+        <ul id="skills-list"></ul>
     </section>
 
     <section id="education">
@@ -72,20 +71,71 @@
     </section>
 
     <section id="contact">
-        <h2 data-i18n="contactTitle">Contato</h2>
-        <form id="contact-form">
-            <label for="name" data-i18n="labelName">Nome</label>
-            <input type="text" id="name" name="name" data-i18n-placeholder="labelName" required>
+        <div class="contact-container">
+            <div class="contact-header">
+                <h2 data-i18n="contactTitle">Vamos Conversar?</h2>
+                <p data-i18n="contactSub">Tem algum projeto em mente ou quer apenas dizer oi?</p>
+            </div>
 
-            <label for="email" data-i18n="labelEmail">E-mail</label>
-            <input type="email" id="email" name="email" data-i18n-placeholder="labelEmail" required>
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <div class="info-card">
+                        <div class="icon-circle secondary"><i data-lucide="mail"></i></div>
+                        <div>
+                            <h3>E-mail</h3>
+                            <p>lucas@sergiosouza.com.br</p>
+                            <a href="mailto:lucas@sergiosouza.com.br" class="contact-link">Enviar e-mail</a>
+                        </div>
+                    </div>
 
-            <label for="message" data-i18n="labelMessage">Mensagem</label>
-            <textarea id="message" name="message" data-i18n-placeholder="labelMessage"></textarea>
+                    <div class="info-card">
+                        <div class="icon-circle primary"><i data-lucide="linkedin"></i></div>
+                        <div>
+                            <h3>LinkedIn</h3>
+                            <p>Conecte-se comigo</p>
+                            <a href="https://www.linkedin.com/in/joaolucaspinheiro/" target="_blank" class="contact-link">Ver perfil</a>
+                        </div>
+                    </div>
 
-            <button type="submit" data-i18n="btnSend">Enviar</button>
-        </form>
+                    <div class="info-card">
+                        <div class="icon-circle accent"><i data-lucide="message-square"></i></div>
+                        <div>
+                            <h3>WhatsApp</h3>
+                            <p>Resposta rápida</p>
+                            <a href="https://wa.me/5511999999999" target="_blank" class="contact-link">+55 44 99148-6466</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-container">
+                    <form id="contact-form">
+                        <div class="input-group">
+                            <label for="name" data-i18n="labelName">Nome</label>
+                            <input type="text" id="name" name="name" required placeholder="Seu nome completo">
+                            <span class="error-message" id="error-name"></span>
+                        </div>
+
+
+
+                        <div class="input-group">
+                            <label for="message" data-i18n="labelMessage">Mensagem</label>
+                            <textarea id="message" name="message" rows="5" placeholder="Conte-me sobre seu projeto..."></textarea>
+                            <span class="error-message" id="error-message"></span>
+                            <div class="char-count"><span id="current-char">0</span>/1000</div>
+                        </div>
+
+                        <button type="submit" id="btn-submit">
+                            <span class="btn-text" data-i18n="btnSend">Enviar Mensagem</span>
+                            <i data-lucide="send" class="btn-icon"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
     </section>
+
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script>lucide.createIcons();</script>
 </main>
 
 <footer>
